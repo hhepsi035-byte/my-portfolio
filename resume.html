@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hepsi - Full Stack Developer Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --bg-page: #f3f4f6;
+      --bg-card: #ffffff;
+      --border-color: #e5e7eb;
+      --accent: #0ea5e9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.5;
+      font-size: 14px;
+      padding: 24px;
+    }
+
+    .action-bar {
+      max-width: 850px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .action-bar .left {
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-outline:hover {
+      background: #f9fafb;
+    }
+
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Resume Header */
+    .header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .name-role h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111827;
+      letter-spacing: -0.5px;
+    }
+
+    .name-role .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .contact-info {
+      text-align: right;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .contact-info a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-info a:hover {
+      color: var(--primary);
+    }
+
+    .contact-info i {
+      width: 14px;
+      text-align: center;
+      margin-right: 4px;
+      color: var(--primary);
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #111827;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title i {
+      color: var(--primary);
+      font-size: 13px;
+    }
+
+    .summary-text {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .skill-category {
+      background: #f9fafb;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #f3f4f6;
+    }
+
+    .skill-category strong {
+      display: block;
+      font-size: 12.5px;
+      color: #111827;
+      margin-bottom: 3px;
+    }
+
+    .skill-category span {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 16px;
+    }
+
+    .project-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .project-title a {
+      color: #111827;
+      text-decoration: none;
+    }
+
+    .project-title a:hover {
+      color: var(--primary);
+    }
+
+    .project-tech {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      color: var(--primary);
+      font-weight: 500;
+      background: #eff6ff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #dbeafe;
+    }
+
+    .project-bullets {
+      list-style-type: disc;
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+
+    .project-bullets li {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+
+    .project-bullets li strong {
+      color: #374151;
+    }
+
+    /* Education */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .edu-title {
+      font-weight: 600;
+      color: #111827;
+      font-size: 13.5px;
+    }
+
+    .edu-sub {
+      color: var(--text-muted);
+      font-size: 12.5px;
+    }
+
+    .edu-date {
+      font-size: 12px;
+      color: #6b7280;
+      font-weight: 500;
+    }
+
+    /* Strengths & Highlights */
+    .strengths-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .strength-tag {
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 11.5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        font-size: 13px;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit !important;
+      }
+      .project-tech {
+        border: 1px solid #ccc;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .contact-info {
+        text-align: left;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .resume-container {
+        padding: 24px 20px;
+      }
+      .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar for PDF Generation and Navigation -->
+  <div class="action-bar">
+    <div class="left">
+      <i class="fas fa-file-alt" style="color: var(--primary);"></i>
+      <span>Hepsi — Full Stack Developer Resume (ATS Friendly)</span>
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <a href="index.html" class="btn btn-outline">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+      </a>
+      <button onclick="window.print()" class="btn">
+        <i class="fas fa-print"></i> Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- ATS Optimized Resume Document -->
+  <div class="resume-container">
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="name-role">
+        <h1> ANTO HEPSI</h1>
+        <div class="title">Full Stack Developer | Software Engineer (Fresher)</div>
+      </div>
+      <div class="contact-info">
+        <div><i class="fas fa-envelope"></i> <a href="mailto:hepsi9706@gmail.com">hepsi9706@gmail.com</a></div>
+        <div><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/hepsi70" target="_blank">linkedin.com/in/hepsi70</a></div>
+        <div><i class="fab fa-github"></i> <a href="https://github.com/hhepsi035-byte" target="_blank">github.com/hhepsi035-byte</a></div>
+        <div><i class="fas fa-map-marker-alt"></i> contact info - 8904027025</div>
+      <div><i class="fas fa-map-marker-alt"></i> location:-RK hedge nagar, thanisandar main road , bengaluru-560077 (India • Open to Relocation & Remote)</div>
+      </div>
+
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
+      <p class="summary-text">
+        Proactive and detail-oriented Full Stack Developer (Fresher) with a strong foundation in modern web architecture, Python, PHP, JavaScript, and relational databases. Proven hands-on experience designing and delivering robust, real-world systems, including a high-security government queue & appointment management platform and an AI/NLP-powered document similarity & duplicate detection suite. Enthusiastic about writing clean, maintainable code, solving complex business logic challenges, and contributing to high-impact development teams.
+      </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <strong>Frontend Development:</strong>
+          <span>HTML5, CSS3, JavaScript (ES6+), Responsive UI Design, AJAX, DOM Manipulation, Bootstrap 5</span>
+        </div>
+        <div class="skill-category">
+          <strong>Backend & APIs:</strong>
+          <span>Python (Flask), PHP 8 (OOP & Procedural), RESTful APIs, Session Management, Role-Based Access Control (RBAC)</span>
+        </div>
+        <div class="skill-category">
+          <strong>Databases & Storage:</strong>
+          <span>MySQL, SQLite, Relational Schema Design, Foreign Keys, Query Optimization, CRUD Operations</span>
+        </div>
+        <div class="skill-category">
+          <strong>AI, NLP & Data Tools:</strong>
+          <span>Scikit-Learn (TF-IDF, Cosine Similarity), NumPy, Pandas, NetworkX Graph Clustering, SpeechRecognition</span>
+        </div>
+        <div class="skill-category">
+          <strong>Developer Tools & VCS:</strong>
+          <span>Git, GitHub, XAMPP/Apache Server, VS Code, Postman, Command Line (PowerShell/Bash)</span>
+        </div>
+        <div class="skill-category">
+          <strong>Core CS Foundations:</strong>
+          <span>Data Structures & Algorithms, Object-Oriented Programming (OOP), Web Security (SQLi Prevention, Input Sanitization)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Major Projects -->
+    <section class="section">
+      <h2 class="section-title"><i class="fas fa-laptop-code"></i> Key Full-Stack Projects</h2>
+
+      <!-- Project 1 -->
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">SmartQueue — Public Office Appointment & Token Management System</span>
+          <span class="project-tech">PHP • MySQL • JavaScript • AJAX • CSS3</span>
+        </div>
+        <ul class="project-bullets">
+          <li>Architected an end-to-end web system to eliminate physical office congestion across Revenue, Certification, and Documentation departments.</li>
+          <li>Engineered a <strong>two-factor booking mechanism</strong> utilizing unique booking reference codes and one-time passwords (OTP) to prevent ticket fraud and double booking.</li>
+          <li>Programmed an automated <strong>time-window validation algorithm</strong> (10-minute early check-in buffer to 30-minute late expiration) synchronized with server timezones.</li>
+          <li>Implemented <strong>asynchronous AJAX live queue trackers</strong> enabling real-time status updates and automated officer-to-citizen calling without page reloads.</li>
+          <li>Designed dedicated multi-role dashboards for Citizens, Department Officers, and System Administrators with operational statistics and feedback tracking.</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-item">
+        <div class="project-header">
+          <span class="project-title">DocuTwin AI — Intelligent Document Duplicate Finder & NLP Clustering Suite</span>
+          <span class="project-tech">Python • Flask • Scikit-Learn • SQLite • NetworkX</span>
+        </div>
+        <ul class="project-bullets">
+          <li>Constructed an intelligent document analysis web app to detect text duplication, plagiarism, and redundancy across institutional files.</li>
+          <li>Implemented a natural language processing pipeline leveraging <strong>TF-IDF vectorization and Cosine Similarity matrices</strong> with customizable similarity thresholds (70% - 95%).</li>
+          <li>Built a <strong>graph-based document clustering algorithm</strong> using NetworkX to automatically categorize and visually isolate duplicate clusters.</li>
+          <li>Developed an exclusive <strong>differential content analyzer</strong> (<code>get_missing_content</code>) highlighting unshared vocabulary between compared document pairs.</li>
+          <li>Integrated multi-file batch uploads, automated file merging, speech recognition voice commands, and an embedded conversational AI assistant.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+      <div class="edu-item">
+        <div>
+          <div class="edu-title">Bachelor of  computer application ( Sesharipuram First grade college , yelahanka)</div>
+          <div class="edu-sub">Core Coursework: Data Structures, Database Management Systems (DBMS), Web Technologies, Software Engineering, Operating Systems</div>
+        </div>
+        <div class="edu-date">Graduating Fresher with CGPA(7.06)</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><i ></i></h2>
+      <div class="edu-item">
+        <div>
+          <div class="edu-title">PUC(Agragami composite pre university college ,jakkur)</div>
+          <div class="edu-sub">Core Coursework:PCMB (physics/chemistry/mathematics/biology)</div>
+        </div>
+        <div class="edu-date">Graduated precentage(62.5%)</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title"><i ></i></h2>
+      <div class="edu-item">
+        <div>
+          <div class="edu-title">SSLC(Hegde Nagar Public school , RK hegde nagar)</div>
+          <div class="edu-sub">Core Coursework:(maths,science,social,english,kannada)</div>
+        </div>
+        <div class="edu-date">Graduated precentage(76.7%)</div>
+      </div>
+    </section>
+
+    <!-- Key Strengths -->
+    <section class="section">
+      <h2 class="section-title"><i class="fas fa-award"></i> Core Competencies & Key Strengths</h2>
+      <div class="strengths-list">
+        <span class="strength-tag">Full-Stack Architecture</span>
+        <span class="strength-tag">Clean & Readable Code</span>
+        <span class="strength-tag">Fast Technology Adoption</span>
+        <span class="strength-tag">Analytical Problem Solving</span>
+        <span class="strength-tag">RESTful API Design</span>
+        <span class="strength-tag">Database Schema Design</span>
+        <span class="strength-tag">Effective Communication</span>
+        <span class="strength-tag">Git Version Control</span>
+      </div>
+    </section>
+
+  <section class="section">
+      <h2 class="section-title"><i class="fas fa-play"></i> Hobbies</h2>
+      <div class="strengths-list">
+        <span class="strength-tag">Coding</span>
+        <span class="strength-tag">Debugging</span>
+        <span class="strength-tag">File appreciation</span>
+        <span class="strength-tag">comic book literature</span>
+
+  <section class="section">
+      <h2 class="section-title"><i class="fas fa-laptop-code"></i> DECLARATION</h2>
+      <div class="strengths-list">
+      <span class="strength-tag">i hereby declare that the information provided above is true to the best of my knowledge and belief</span>
+  </div>
+</div></section>
+
+</body>
+</html>

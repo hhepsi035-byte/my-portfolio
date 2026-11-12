@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hepsi | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Hepsi - Passionate Full Stack Developer & Software Engineer. Explore production-grade projects in Python, Flask, PHP, MySQL, and NLP.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Ambient Glowing Background Accents -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- ==========================================
+       Navigation Bar
+       ========================================== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#home" class="nav-brand">
+        <img src="assets/hepsi_profile.jpg" alt="Hepsi Profile" class="brand-avatar">
+        <span>Hepsi<span class="gradient-text">.dev</span></span>
+        <span class="brand-code">Full-Stack</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Navbar Actions -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i class="fas fa-paper-plane"></i> Hire Me
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       Hero Section
+       ========================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Headline & Bio -->
+        <div class="hero-text-content">
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span>Actively Seeking Full-Time Opportunities • Fresher / Junior Dev</span>
+          </div>
+
+          <div class="hero-greeting">👋 Hello World, I'm</div>
+          <h1 class="hero-title">
+            HEPSI
+          </h1>
+
+          <div class="typewriter-wrapper">
+            <span>Specialized in</span>
+            <span id="typed-text" class="typed-text"></span>
+            <span class="cursor">&nbsp;</span>
+          </div>
+
+          <p class="hero-bio">
+            An ambitious Full Stack Developer with hands-on experience building end-to-end web applications and intelligent data-driven systems. Proficient in <strong>Python (Flask)</strong>, <strong>PHP & MySQL</strong>, <strong>JavaScript (ES6+)</strong>, and <strong>NLP Machine Learning</strong> models. Passionate about writing scalable, clean code and turning real-world problem statements into high-performance digital products.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-laptop-code"></i> Explore Projects
+            </a>
+            <a href="resume.html" target="_blank" class="btn btn-outline">
+              <i class="fas fa-file-download"></i> View & Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Let's Connect
+            </a>
+          </div>
+
+          <!-- Social Quick Links -->
+          <div class="hero-socials">
+            <a href="https://github.com/hhepsi035-byte" target="_blank" class="social-pill" title="GitHub Profile">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/hepsi70" target="_blank" class="social-pill" title="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:hepsi9706@gmail.com" class="social-pill" title="Send Email">
+              <i class="fas fa-envelope"></i>
+              <span>hepsi9706@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Visual & Floating Badges -->
+        <div class="hero-visual">
+          <div class="avatar-halo">
+            <div class="avatar-inner">
+              <img src="assets/hepsi_profile.jpg" alt="Hepsi - Full Stack Developer" class="avatar-img">
+            </div>
+          </div>
+
+          <!-- Floating Orbital Badges -->
+          <div class="floating-badge badge-py">
+            <i class="fab fa-python" style="color: #38bdf8; font-size: 1.1rem;"></i>
+            <span>Python & Flask</span>
+          </div>
+          <div class="floating-badge badge-php">
+            <i class="fab fa-php" style="color: #818cf8; font-size: 1.1rem;"></i>
+            <span>PHP 8 & MySQL</span>
+          </div>
+          <div class="floating-badge badge-db">
+            <i class="fas fa-database" style="color: #f59e0b; font-size: 1.1rem;"></i>
+            <span>Relational DBs</span>
+          </div>
+          <div class="floating-badge badge-nlp">
+            <i class="fas fa-brain" style="color: #ec4899; font-size: 1.1rem;"></i>
+            <span>NLP & Similarity</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       About & Why Hire Me (Fresher Value)
+       ========================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-pill"><i class="fas fa-user-astronaut"></i> Why Choose Me</span>
+        <h2 class="section-title">Fresh Perspective, <span class="gradient-text">Proven Engineering Drive</span></h2>
+        <p class="section-subtitle">
+          While stepping into the professional engineering world as a fresher, I bring a demonstrated history of delivering end-to-end architectures, solving core security and algorithm problems, and learning rapidly.
+        </p>
+      </div>
+
+      <div class="fresher-cards">
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>Full-Stack Autonomy</h3>
+          <p>
+            Able to conceptualize and build all tiers of a web app: normalized relational databases (MySQL, SQLite), backend business logic (Python, PHP), and dynamic user interfaces (AJAX, ES6+).
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Production-Minded Security</h3>
+          <p>
+            Practical understanding of web application security: role-based access control, parameterized SQL queries, single-use OTP authentication, and server-side request verification.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>Modern AI & NLP Integration</h3>
+          <p>
+            Not just conventional CRUD apps; I integrate Machine Learning pipelines (TF-IDF vectorization, Cosine Similarity, NetworkX clustering, Speech-to-Text) into functional products.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Rapid Ramp-up & Adaptability</h3>
+          <p>
+            Fast learner with zero legacy habits. Eager to dive into your tech stack, participate in code reviews, adopt team best practices, and deliver meaningful features from week one.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Technical Skills Matrix
+       ========================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-pill"><i class="fas fa-code"></i> Technical Toolkit</span>
+        <h2 class="section-title">Skills & <span class="cyan-gradient-text">Technologies</span></h2>
+        <p class="section-subtitle">
+          A comprehensive breakdown of my engineering capabilities across the full web development stack and modern software tools.
+        </p>
+      </div>
+
+      <!-- Skills Category Filter Buttons -->
+      <div class="skills-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Skills</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend & APIs</button>
+        <button class="filter-btn" data-filter="database">Databases</button>
+        <button class="filter-btn" data-filter="ai">AI / NLP & Data</button>
+        <button class="filter-btn" data-filter="tools">Tools & DevOps</button>
+      </div>
+
+      <!-- Skills Grid Cards -->
+      <div class="skills-grid">
+
+        <!-- Skill 1: Python -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon-box" style="color: #38bdf8;">
+            <i class="fab fa-python"></i>
+          </div>
+          <div class="skill-info">
+            <h4>Python 3</h4>
+            <p>Core programming, OOP, data processing, model integration, automation scripting.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Decorators</span>
+              <span class="skill-tag">Modules</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 2: Flask -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon-box" style="color: #ffffff;">
+            <i class="fas fa-pepper-hot"></i>
+          </div>
+          <div class="skill-info">
+            <h4>Flask (Python Web)</h4>
+            <p>RESTful APIs, routing, Jinja2 templating, sessions, request handling, file uploads.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Microframework</span>
+              <span class="skill-tag">Blueprints</span>
+              <span class="skill-tag">REST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 3: PHP -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon-box" style="color: #818cf8;">
+            <i class="fab fa-php"></i>
+          </div>
+          <div class="skill-info">
+            <h4>PHP 8 (Server-Side)</h4>
+            <p>Session management, RBAC, MySQLi prepared statements, AJAX backend handlers, authentication.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Server Scripts</span>
+              <span class="skill-tag">Sessions</span>
+              <span class="skill-tag">MySQLi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 4: JavaScript -->
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon-box" style="color: #facc15;">
+            <i class="fab fa-js-square"></i>
+          </div>
+          <div class="skill-info">
+            <h4>JavaScript (ES6+)</h4>
+            <p>Asynchronous programming, Fetch/AJAX, DOM manipulation, event listeners, dynamic UI.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Async/Await</span>
+              <span class="skill-tag">Fetch API</span>
+              <span class="skill-tag">DOM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 5: MySQL -->
+        <div class="skill-card" data-category="database">
+          <div class="skill-icon-box" style="color: #0284c7;">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="skill-info">
+            <h4>MySQL & Relational Design</h4>
+            <p>Schema design, normalization, foreign keys, transactions, indexing, SQL queries.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">RDBMS</span>
+              <span class="skill-tag">JOINs</span>
+              <span class="skill-tag">Foreign Keys</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 6: SQLite -->
+        <div class="skill-card" data-category="database">
+          <div class="skill-icon-box" style="color: #38bdf8;">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="skill-info">
+            <h4>SQLite</h4>
+            <p>Lightweight embedded databases, schema migrations, PRAGMA checks, CRUD.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Embedded DB</span>
+              <span class="skill-tag">Lightweight</span>
+              <span class="skill-tag">Schema Migration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 7: NLP & Scikit-Learn -->
+        <div class="skill-card" data-category="ai">
+          <div class="skill-icon-box" style="color: #f97316;">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <div class="skill-info">
+            <h4>Scikit-Learn & NLP</h4>
+            <p>TF-IDF Vectorization, Cosine Similarity matrices, text clustering, stop-words filtering.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">TF-IDF</span>
+              <span class="skill-tag">Cosine Sim</span>
+              <span class="skill-tag">Clustering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 8: Data Tools (Pandas, NumPy, NetworkX) -->
+        <div class="skill-card" data-category="ai">
+          <div class="skill-icon-box" style="color: #10b981;">
+            <i class="fas fa-chart-network"></i>
+          </div>
+          <div class="skill-info">
+            <h4>NumPy, Pandas & NetworkX</h4>
+            <p>Matrix algebra, data restructuring, graph visualization, similarity cluster networks.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">Graph Theory</span>
+              <span class="skill-tag">DataFrames</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 9: HTML5 & Modern CSS3 -->
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon-box" style="color: #e44d26;">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="skill-info">
+            <h4>HTML5 & Semantic Markup</h4>
+            <p>Accessible semantic markup, responsive meta tags, form validation, SEO basics.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Semantic Web</span>
+              <span class="skill-tag">Accessibility</span>
+              <span class="skill-tag">Forms</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 10: CSS3 & Responsive Design -->
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon-box" style="color: #264de4;">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <div class="skill-info">
+            <h4>CSS3, Flexbox & Grid</h4>
+            <p>Modern layouts, CSS custom properties, glassmorphism, animations, media queries.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">CSS Grid</span>
+              <span class="skill-tag">Flexbox</span>
+              <span class="skill-tag">Glassmorphism</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 11: Git & GitHub -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-icon-box" style="color: #f05032;">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <div class="skill-info">
+            <h4>Git & GitHub</h4>
+            <p>Branching, commits, pull requests, version tracking, open-source repository workflows.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Version Control</span>
+              <span class="skill-tag">Branching</span>
+              <span class="skill-tag">PRs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 12: Development Tools -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-icon-box" style="color: #6366f1;">
+            <i class="fas fa-terminal"></i>
+          </div>
+          <div class="skill-info">
+            <h4>Developer Environment</h4>
+            <p>XAMPP (Apache + MySQL), VS Code, Postman API testing, PowerShell, Chrome DevTools.</p>
+            <div class="skill-tags">
+              <span class="skill-tag">XAMPP</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">DevTools</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Featured Major Projects (In-Depth Analysis)
+       ========================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-pill"><i class="fas fa-rocket"></i> Production-Grade Work</span>
+        <h2 class="section-title">Analyzed <span class="gradient-text">Major Projects</span></h2>
+        <p class="section-subtitle">
+          Real-world applications architected from scratch. Explore technical highlights and interact with live algorithmic simulators below.
+        </p>
+      </div>
+
+      <div class="projects-container">
+
+        <!-- ========================================================
+             PROJECT 1: SmartQueue
+             ======================================================== -->
+        <div class="project-showcase">
+          <div class="project-grid">
+            
+            <!-- Left: Project Narrative & Deep Architecture -->
+            <div class="project-content">
+              <div>
+                <div class="project-category">
+                  <span class="cat-badge cat-web">Full-Stack Web Application</span>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-clock"></i> Live System</span>
+                </div>
+
+                <h3 class="project-title">SmartQueue: Public Office Appointment & Token System</h3>
+
+                <p class="project-desc">
+                  A high-reliability digital queue management platform created for government administration departments (Revenue, Certification, and Document Registration). Replaces chaotic physical lines with automated appointment slotting, authenticated token dispensing, and synchronized officer desks.
+                </p>
+
+                <ul class="feature-list">
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Fraud-Proof Token Verification:</strong> Issues unique booking references paired with dynamic 4-digit OTPs checked via secure MySQL prepared statements.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Strict Time-Window Enforcement:</strong> Algorithm enforces a 10-minute early check-in buffer up to a 30-minute late expiration cutoff, preventing stale queues.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Real-Time Asynchronous Updates:</strong> Uses AJAX polling (<code>currentstatus.js</code> & <code>get_stats.php</code>) for live queue dashboards without page refresh.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Multi-Role Workspace:</strong> Dedicated views for Citizens (booking & status), Department Officers (queue calling & session tracking), and Admins (department stats).</span>
+                  </li>
+                </ul>
+
+                <div class="tech-stack-row">
+                  <span class="tech-badge"><i class="fab fa-php"></i> PHP 8.x</span>
+                  <span class="tech-badge"><i class="fas fa-database"></i> MySQL</span>
+                  <span class="tech-badge"><i class="fab fa-js"></i> JavaScript (ES6)</span>
+                  <span class="tech-badge"><i class="fas fa-sync-alt"></i> AJAX</span>
+                  <span class="tech-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                  <span class="tech-badge"><i class="fas fa-server"></i> Apache/XAMPP</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/hhepsi035-byte" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+                <button class="btn btn-outline btn-sm" onclick="copyToClipboard('c:\\xampp\\htdocs\\smartqueue', 'Source path copied!')">
+                  <i class="fas fa-folder-open"></i> Local Source: /smartqueue
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Live Simulation Demo -->
+            <div class="project-interactive-panel">
+              <div class="demo-box">
+                <div class="demo-header">
+                  <h4><i class="fas fa-sliders-h" style="color: var(--primary-light);"></i> Live Queue Token Simulator</h4>
+                  <span class="live-badge">Interactive Demo</span>
+                </div>
+
+                <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px;">
+                  Test SmartQueue's token generation and arrival window rules right here:
+                </p>
+
+                <div class="queue-sim-inputs">
+                  <div class="sim-input-group">
+                    <label for="sim-citizen-name">Citizen Name</label>
+                    <input type="text" id="sim-citizen-name" class="sim-input" value="Alex Smith" placeholder="Enter name">
+                  </div>
+                  <div class="sim-input-group">
+                    <label for="sim-dept-select">Department</label>
+                    <select id="sim-dept-select" class="sim-select">
+                      <option value="Revenue">Revenue Department</option>
+                      <option value="Certification">Certification Dept</option>
+                      <option value="Document">Document Registration</option>
+                    </select>
+                  </div>
+                </div>
+
+                <button id="sim-book-token" class="btn btn-primary btn-sm" style="width: 100%;">
+                  <i class="fas fa-ticket-alt"></i> Generate Secure Token & OTP
+                </button>
+
+                <div class="queue-display-card" id="sim-queue-display">
+                  <div style="font-size: 0.85rem; color: var(--text-muted);">
+                    Click <strong>Generate Secure Token</strong> above to simulate appointment creation with time window validation.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ========================================================
+             PROJECT 2: DocuTwin AI (Duplicate Document Finder)
+             ======================================================== -->
+        <div class="project-showcase">
+          <div class="project-grid">
+            
+            <!-- Left: Project Narrative & Deep Architecture -->
+            <div class="project-content">
+              <div>
+                <div class="project-category">
+                  <span class="cat-badge cat-ai">AI & NLP Full-Stack Suite</span>
+                  <span style="font-size: 0.8rem; color: var(--text-muted);"><i class="fas fa-brain"></i> Machine Learning</span>
+                </div>
+
+                <h3 class="project-title">DocuTwin AI: Document Duplicate Finder & NLP Clustering</h3>
+
+                <p class="project-desc">
+                  An intelligent text analytics and duplicate discovery system designed to process institutional repositories. Leverages natural language processing vector spaces to detect plagiarized content, group near-duplicate clusters, and perform automated differential vocabulary analysis.
+                </p>
+
+                <ul class="feature-list">
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>TF-IDF & Cosine Similarity Engine:</strong> Transforms raw text into high-dimensional vector spaces using Scikit-Learn to compute exact pairwise similarity percentages.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Graph-Based Document Clustering:</strong> Utilizes NetworkX to model document connectivity and automatically group clusters exceeding threshold cutoffs.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Differential Vocabulary Analyzer:</strong> Built proprietary <code>get_missing_content</code> logic isolating unique words between revisions.</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>
+                    <span><strong>Batch Upload & Smart Merging:</strong> Handles multi-file uploads with automated file concatenation and integrated speech-recognition voice commands.</span>
+                  </li>
+                </ul>
+
+                <div class="tech-stack-row">
+                  <span class="tech-badge"><i class="fab fa-python"></i> Python 3</span>
+                  <span class="tech-badge"><i class="fas fa-pepper-hot"></i> Flask</span>
+                  <span class="tech-badge"><i class="fas fa-brain"></i> Scikit-Learn</span>
+                  <span class="tech-badge"><i class="fas fa-project-diagram"></i> NetworkX</span>
+                  <span class="tech-badge"><i class="fas fa-table"></i> Pandas & NumPy</span>
+                  <span class="tech-badge"><i class="fas fa-database"></i> SQLite</span>
+                  <span class="tech-badge"><i class="fas fa-microphone"></i> SpeechRecognition</span>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://github.com/hhepsi035-byte" target="_blank" class="btn btn-primary btn-sm">
+                  <i class="fab fa-github"></i> View GitHub Repository
+                </a>
+                <button class="btn btn-outline btn-sm" onclick="copyToClipboard('c:\\Users\\HEPSI\\OneDrive\\Desktop\\document-duplicate-finder', 'Source path copied!')">
+                  <i class="fas fa-folder-open"></i> Local Source: /document-duplicate-finder
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Live Simulation Demo -->
+            <div class="project-interactive-panel">
+              <div class="demo-box">
+                <div class="demo-header">
+                  <h4><i class="fas fa-brain" style="color: var(--secondary);"></i> Live NLP Similarity Calculator</h4>
+                  <span class="live-badge" style="background: rgba(6, 182, 212, 0.15); color: var(--secondary);">NLP Engine</span>
+                </div>
+
+                <div class="sim-nlp-inputs">
+                  <div>
+                    <label style="font-size: 0.76rem; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; display: block;">Document A Snippet</label>
+                    <textarea id="nlp-text-1" class="sim-textarea" placeholder="Paste or type text for document 1...">The quick brown fox jumps over the lazy dog and runs across the forest meadow.</textarea>
+                  </div>
+                  <div>
+                    <label style="font-size: 0.76rem; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; display: block;">Document B Snippet</label>
+                    <textarea id="nlp-text-2" class="sim-textarea" placeholder="Paste or type text for document 2...">The quick brown fox leaps over the lazy dog and sprints across the green meadow.</textarea>
+                  </div>
+                </div>
+
+                <div class="sim-slider-group">
+                  <label for="nlp-threshold">
+                    <span>Similarity Decision Threshold</span>
+                    <strong id="threshold-val" style="color: var(--secondary);">70%</strong>
+                  </label>
+                  <input type="range" id="nlp-threshold" class="sim-slider" min="50" max="95" value="70">
+                </div>
+
+                <button id="btn-compute-nlp" class="btn btn-outline btn-sm" style="width: 100%; margin-top: 10px;">
+                  <i class="fas fa-calculator"></i> Recompute Similarity Vector
+                </button>
+
+                <div class="nlp-result-box">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600;">
+                    <span>Cosine Match Score:</span>
+                    <span id="nlp-score-text" style="color: var(--secondary); font-family: var(--font-code); font-weight: 700;">85%</span>
+                  </div>
+                  <div class="sim-meter">
+                    <div class="sim-meter-fill" id="nlp-meter-fill" style="width: 85%;"></div>
+                  </div>
+                  <div id="nlp-verdict" style="font-size: 0.82rem; margin-top: 6px;">
+                    <span style="color: #ef4444; font-weight: 700;"><i class="fas fa-exclamation-triangle"></i> Near-Duplicate Alert!</span> (Exceeds 70% Threshold)
+                  </div>
+                  <div id="nlp-diff" style="font-size: 0.72rem; color: var(--text-dim); margin-top: 6px; font-family: var(--font-code);">
+                    Unique in Doc 1: [jumps, runs] | Unique in Doc 2: [leaps, sprints]
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Downloadable Resume Center
+       ========================================== -->
+  <section class="section resume-section" id="resume">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-pill"><i class="fas fa-file-invoice"></i> Credentials</span>
+        <h2 class="section-title">Downloadable <span class="gradient-text">Resume</span></h2>
+        <p class="section-subtitle">
+          Recruiter-ready, ATS-formatted resume detailing technical proficiencies, project milestones, and educational foundation.
+        </p>
+      </div>
+
+      <div class="resume-card-box">
+        
+        <!-- Left: Download Options & Bullet Highlights -->
+        <div class="resume-meta-info">
+          <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 8px;">
+            Full Stack Developer Resume
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+            Optimized for Applicant Tracking Systems (ATS) and human recruiters alike. Available for immediate review or one-click printing/saving as PDF.
+          </p>
+
+          <div class="resume-highlights">
+            <div class="resume-highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Formatted for modern engineering screening benchmarks</span>
+            </div>
+            <div class="resume-highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Detailed impact metrics from SmartQueue and DocuTwin AI</span>
+            </div>
+            <div class="resume-highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Clean, standard fonts with zero parser-breaking artifacts</span>
+            </div>
+            <div class="resume-highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Direct contact links and verified GitHub project sources</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="resume.html" target="_blank" class="btn btn-primary">
+              <i class="fas fa-print"></i> Open & Print / Save as PDF
+            </a>
+            <button class="btn btn-outline" onclick="copyToClipboard(window.location.origin + '/resume.html', 'Resume link copied!')">
+              <i class="fas fa-link"></i> Copy Resume URL
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Mini Preview Card -->
+        <div class="resume-preview-sheet">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid #2563eb; padding-bottom: 6px; margin-bottom: 8px;">
+            <div>
+              <h2>HEPSI</h2>
+              <div class="r-subtitle">Full Stack Developer | Software Engineer</div>
+            </div>
+            <div style="text-align: right; font-size: 9.5px; color: #4b5563;">
+              <div>hepsi9706@gmail.com</div>
+              <div>linkedin.com/in/hepsi70</div>
+              <div>github.com/hhepsi035-byte</div>
+            </div>
+          </div>
+
+          <div class="r-section">
+            <div class="r-sec-title">Core Skills</div>
+            <div class="r-muted">Python, Flask, PHP, MySQL, JavaScript (ES6+), SQLite, Scikit-Learn, HTML5, CSS3, Git</div>
+          </div>
+
+          <div class="r-section">
+            <div class="r-sec-title">Featured Projects</div>
+            <div style="font-weight: 600; color: #111827;">SmartQueue: Govt Office Token & Appointment Platform</div>
+            <div class="r-muted" style="margin-bottom: 4px;">• Architected multi-department queue system with OTP authentication & 10m-30m window algorithms.</div>
+            <div style="font-weight: 600; color: #111827;">DocuTwin AI: NLP Duplicate Finder & Clustering Suite</div>
+            <div class="r-muted">• Built TF-IDF and Cosine similarity pipeline with NetworkX graph clustering and voice commands.</div>
+          </div>
+
+          <div>
+            <div class="r-sec-title">Education</div>
+            <div style="display: flex; justify-content: space-between;">
+              <span style="font-weight: 600;">B.E. / B.Tech Computer Science & Engineering</span>
+              <span class="r-muted">Fresher Graduate</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Contact & Connect Section
+       ========================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge-pill"><i class="fas fa-envelope-open-text"></i> Reach Out</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">
+          Have an open Full Stack role, internship, or freelance project? I'd love to discuss how I can add immediate value to your engineering team.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Direct Contact Information Cards -->
+        <div class="contact-info-panel">
+          
+          <!-- Email Card -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-card-info" style="flex: 1;">
+              <h4>Email Address</h4>
+              <p><a href="mailto:hepsi9706@gmail.com">hepsi9706@gmail.com</a></p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="copyToClipboard('hepsi9706@gmail.com', 'Email copied!')" title="Copy Email">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+
+          <!-- LinkedIn Card -->
+          <div class="contact-card">
+            <div class="contact-card-icon" style="color: #0ea5e9; background: rgba(14, 165, 233, 0.12);">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div class="contact-card-info" style="flex: 1;">
+              <h4>LinkedIn Profile</h4>
+              <p><a href="https://www.linkedin.com/in/hepsi70" target="_blank">linkedin.com/in/hepsi70</a></p>
+            </div>
+            <a href="https://www.linkedin.com/in/hepsi70" target="_blank" class="btn btn-outline btn-sm" title="Visit Profile">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <!-- GitHub Card -->
+          <div class="contact-card">
+            <div class="contact-card-icon" style="color: #ffffff; background: rgba(255, 255, 255, 0.08);">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-card-info" style="flex: 1;">
+              <h4>GitHub Repositories</h4>
+              <p><a href="https://github.com/hhepsi035-byte" target="_blank">github.com/hhepsi035-byte</a></p>
+            </div>
+            <a href="https://github.com/hhepsi035-byte" target="_blank" class="btn btn-outline btn-sm" title="View Repos">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <!-- Availability & Work Preference -->
+          <div class="contact-card">
+            <div class="contact-card-icon" style="color: #10b981; background: rgba(16, 185, 129, 0.12);">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-card-info">
+              <h4>Work Preference & Availability</h4>
+              <p>Immediate Joiner • Open to Remote, Hybrid, or On-Site relocation</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Contact Form -->
+        <div class="contact-form-box">
+          <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 6px;">Send a Direct Message</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">
+            Fill out the form below to send an email inquiry directly to my inbox.
+          </p>
+
+          <form id="portfolio-contact-form">
+            <div class="form-group">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Sarah Jenkins (Recruiter / Tech Lead)" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Your Work Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. sarah@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Full Stack Developer Interview Inquiry" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Hello Hepsi, we reviewed your projects and would like to discuss..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message to Hepsi
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Footer
+       ========================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <div style="font-weight: 700; color: var(--text-main); font-size: 1.1rem; margin-bottom: 4px;">
+          Hepsi • Full Stack Developer
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-dim);">
+          Building scalable software with passion, modern standards, and clean architecture.
+        </p>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="https://github.com/hhepsi035-byte" target="_blank" style="font-size: 1.2rem;" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hepsi70" target="_blank" style="font-size: 1.2rem; color: #0ea5e9;" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:hepsi9706@gmail.com" style="font-size: 1.2rem; color: var(--primary-light);" title="Email"><i class="fas fa-envelope"></i></a>
+        <button id="back-to-top" class="back-to-top" title="Back to Top">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="portfolio-toast" class="toast"></div>
+
+  <!-- Custom Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
